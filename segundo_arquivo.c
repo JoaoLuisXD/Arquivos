@@ -20,6 +20,17 @@ int main(int qtd_param, char* param[]){
         printf("\nArquivo abriu com sucesso!\n");
 
 
+        FILE * saida = fopen("saida.txt", "wt");
+        if(!saida)
+        {
+            printf("erro ao abrir arquivo saida.txt");
+            exit(1);
+        }
+
+
+        
+
+
         int c = 0;
         int nlinhas = 0;
         while ((c = fgetc(fp)) != EOF) // Lê o arquivo, e atribui o valor em "c". Depois compara com "EOF"
@@ -28,10 +39,14 @@ int main(int qtd_param, char* param[]){
             {
                 nlinhas++; // Incrementa a quantidade de linhas
             }
+            
+            fputc(tolower(c),saida);
+            
+            
         }
         printf("Quantidade de linhas: %d",nlinhas+1);
 
-    
+        
 
 
 
