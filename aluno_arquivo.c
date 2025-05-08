@@ -36,13 +36,14 @@ int main()
     }
     Aluno * registro_aluno = (Aluno*)malloc(qtd_linhas*sizeof(Aluno));
     rewind (fp);
-    for (int i = 0; i < qtd_linhas; i++)
-    {
-        fscanf(fp, "%d%*c ;",&registro_aluno[i].matricula);
-        fscanf(fp, "%s%*c ;",registro_aluno[i].nome);
-        fscanf(fp, "%d%*c ;",&registro_aluno[i].idade);
-        fscanf(fp, "%s%*c ;",registro_aluno[i].curso);
+    for (int i = 0; i < qtd_linhas; i++) {
+        fscanf(fp, "%d;%100[^;];%d;%100[^\n]\n",
+               &registro_aluno[i].matricula,
+               registro_aluno[i].nome,
+               &registro_aluno[i].idade,
+               registro_aluno[i].curso);
     }
+
     
     for (int i = 0; i < qtd_linhas; i++)
     {
