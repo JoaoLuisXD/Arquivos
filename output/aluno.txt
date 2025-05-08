@@ -1,0 +1,5 @@
+1234;João da Silva;20;Ciência da Computação
+1234;João da Silva;20;Ciência da Computação
+1234;João da Silva;20;Ciência da Computação
+1234;João da Silva;20;Ciência da Computação
+1234;João da Silva;20;Ciência da Computação
