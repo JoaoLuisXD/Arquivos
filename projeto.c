@@ -90,6 +90,6 @@ void imprime_aluno(void *a)
 void concatena_linha(void *a, FILE * fp)
 {
     Aluno *al = (Aluno*)al;
-    printf("|%s;%s|\n",al->nome,al->matricula); 
+    fprintf(fp,"|%s;%s|\n",al->nome,al->matricula); 
 }
 
